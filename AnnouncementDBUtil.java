@@ -146,7 +146,7 @@ public static boolean validate(String title) {
 			
 		}
 		catch(Exception e){
-			e.printStackTrace()
+			e.printStackTrace();
 			
 		}
 		
@@ -156,11 +156,11 @@ public static boolean validate(String title) {
 	
 	public static boolean deleteannouncement(String Id) {
 	
-		int convID = Integer.parseInt(Id)
+		int convID = Integer.parseInt(Id);
 		
 		try {
 			con = DBConnect.getConnection();
-			stmt = con.createStatement()
+			stmt = con.createStatement();
 			String sql ="delete from annou where adid ='"+convID+"'";
 			int r = stmt.executeUpdate(sql);
 			
@@ -176,6 +176,6 @@ public static boolean validate(String title) {
 		}
 		 
 		
-		return isSuccess
+		return isSuccess;
 	}
 }
